@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bhavin Varsur's personal website and portfolio showcasing skills, projects, blog posts, and contact info."
+    />
+    <meta property="og:title" content="Bhavin Varsur - Software Engineer" />
+    <meta property="og:image" content="assets/favicons/2.png" />
+    <title>Bhavin Varsur - Software Engineer</title>
+    <link rel="icon" type="image/png" href="assets/favicons/2.png" />
+    <!-- style section start -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- style section end -->
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header>
+      <div class="content">
+        <h1>Bhavin Varsur</h1>
+        <p>Software Engineer</p>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- navigation bar start -->
+    <nav>
+      <div class="nav-container">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#blog">Blog</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+        <button
+          id="theme-toggle"
+          aria-label="Switch to dark theme"
+          title="Switch to dark theme"
+          aria-pressed="false"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+    <!-- navigation bar end  -->
+
+    <div class="container">
+      <!-- about section start -->
+      <section id="about" class="section-card">
+        <h2>About Me</h2>
+        <p>
+          I’m Bhavin Varsur, an IT Analyst at Tata Consultancy Services,
+          passionate about crafting efficient, scalable, and user-friendly
+          software. With expertise in .NET, C#, JavaScript, HTML/CSS, SQL
+          Server, and MongoDB, I focus on clean code, agile delivery, and
+          seamless user experiences. I enjoy transforming complex business needs
+          into elegant technical solutions and continuously strive to grow
+          through innovation and collaboration.
+        </p>
+      </section>
+      <!-- about section end -->
+      <section id="work" class="section-card">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>IT Analyst</h3>
+              <span class="timeline-company"
+                >Tata Consultancy Services (TCS)</span
+              >
+              <span class="timeline-date">[March,2022 – Present]</span>
+              <ul class="responsibilities">
+                <li>
+                  Analyze and resolve customer-reported issues with precision
+                  and speed.
+                </li>
+                <li>
+                  Deliver clean, structured, and maintainable code tailored to
+                  evolving business needs.
+                </li>
+                <li>
+                  Collaborate with QA and support teams to ensure quick bug
+                  resolutions and seamless deployments.
+                </li>
+                <li>
+                  Follow coding best practices and maintain high standards in
+                  code quality and documentation.
+                </li>
+                <li>
+                  Participate in daily stand-ups, sprint planning, and
+                  retrospective meetings as part of the Agile process.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <!-- work experience item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Back-End Developer</h3>
+              <span class="timeline-company"
+                >Shree Swaminarayan Gurukul Organization</span
+              >
+              <span class="timeline-date">[April, 2019 – February, 2022]</span>
+              <ul class="responsibilities">
+                <li>
+                  Designed and developed RESTful APIs using
+                  <strong>.NET</strong> for internal systems used across all
+                  Gurukul branches.
+                </li>
+                <li>
+                  Implemented
+                  <strong>Test Driven Development (TDD)</strong> practices with
+                  <strong>xUnit</strong> for unit and integration testing.
+                </li>
+                <li>
+                  Managed complex <strong>database operations</strong>, ensuring
+                  performance and reliability of backend services.
+                </li>
+                <li>
+                  Collaborated on multi-module projects to support admission application, student
+                  management, fee collection, and accounts.
+                </li>
+                <li>
+                  Presented product demos to stakeholders and provided technical
+                  support for live feature rollouts.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- projects section start -->
+      <section id="projects" class="section-card">
+        <h2>Projects</h2>
+        <p>
+          Here are a few GitHub projects I've worked on, showcasing technical
+          development skills:
+        </p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <h3>Simple Calculator App</h3>
+            <p>
+              A cross-platform calculator app built using
+              <strong>.NET MAUI</strong> that supports basic arithmetic
+              operations with a responsive and native-like interface for
+              Android, iOS, and Windows.
+            </p>
+            <a
+              href="https://github.com/bvarsur/CalculatorApp"
+              target="_blank"
+              class="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+          <div class="portfolio-item">
+            <h3>JWT Authentication API</h3>
+            <p>
+              A secure REST API implementing JWT authentication in .NET for
+              role-based access
+            </p>
+            <a
+              href="https://github.com/bvarsur/JWTAuthentication"
+              target="_blank"
+              class="project-link"
+              >View on GitHub</a
+            >
+          </div>
+          <div class="portfolio-item">
+            <h3>EBookShop1 (.NET MVC)</h3>
+            <p>
+              A simple eBook shop built using ASP.NET Core MVC with category
+              filtering, book details, and admin CRUD functionality.
+            </p>
+            <a href="https://github.com/bvarsur/EBookShop1" target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- projects section end -->
+
+      <!-- resume section start -->
+      <section id="resume" class="section-card">
+        <h2>Resume</h2>
+        <p>You can download my latest CV or resume below.</p>
+        <a
+          href="assets/Bhavin Varsur.docx"
+          download
+          class="download-btn"
+          aria-label="Download Resume"
+        >
+          Download CV
+        </a>
+      </section>
+      <!-- resume section end -->
+
+      <!-- blog section start -->
+      <section id="blog" class="section-card">
+        <h2>Blog</h2>
+        <p>Check out some of my latest blog posts:</p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <h3>Logging in ASP.NET Core 3.1 Using NLog</h3>
+            <p>
+              NLog is an open source logging framework that provides a great
+              flexibility and configurable options to log the insights of your
+              application. It allows to select multiple targets like database,
+              files, console, etc. at the same time so that user don’t have to
+              maintain different configurations in code. This is the most widely
+              used logging framework out there
+            </p>
+            <a
+              href="https://bhavinvarsur.blogspot.com/2020/10/logging-in-aspnet-core-31-using-nlog.html"
+              target="_blank"
+              class="project-link"
+              >Read More</a
+            >
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Indexing and Searching Elasticsearch 6.3.1</h3>
+            <p>
+              Elasticsearch is a search and analytics engine that uses indexing
+              to make data searchable. It stores data in inverted indexes,
+              allowing for fast and efficient retrieval of documents based on
+              search queries.
+            </p>
+            <a
+              href="blogs//posts/sample-post3.html"
+              target="_blank"
+              class="project-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!-- External Blog Posts -->
+        <h3 style="margin-top: 2rem">Recommended External Reads</h3>
+        <ul class="external-blogs">
+          <li>
+            <a
+              href="https://bhavinvarsur1999.weebly.com/blog/golconda-a-historic-fort"
+              target="_blank"
+            >
+              🔗 Golconda - a historic fort
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bhavinvarsur1999.weebly.com/blog/the-charm-of-charminar"
+              target="_blank"
+            >
+              🔗 The Charm of Charminar
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- blog section end -->
+
+      <!-- videos section start -->
+      <section id="videos" class="section-card">
+        <h2>Videos</h2>
+        <p>Watch some of my recent walkthroughs and tech tutorials:</p>
+        <div class="video-grid">
+          <div class="video-item">
+            <iframe
+              width="100"
+              height="315"
+              src="https://www.youtube.com/embed/qOX2TDwoZbI?si=ISg6sGSuItEkpt-L"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p class="video-caption">
+              🔧 Indexing and Searching in Elasticsearch 6.3.1
+            </p>
+          </div>
+
+          <div class="video-item">
+            <iframe
+              width="100"
+              height="315"
+              src="https://www.youtube.com/embed/K0vOjr-AFwE?si=3XInoTvbk0wrg5w1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p class="video-caption">
+              🚀 How to Create Transparent Dropdown Menu with HTML and CSS in
+              HINDI
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- videos section end -->
+
+      <!-- skills section start -->
+      <section id="skills" class="section-card">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h3>.NET Core</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>C#</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Javascript</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>SQL</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section start -->
+      <section id="contact" class="section-card">
+        <h2>Contact Me</h2>
+        <p>
+          If you'd like to get in touch, feel free to reach out via email or
+          connect on LinkedIn. I'm always interested in technology, innovation,
+          and opportunities for collaboration.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <strong>Email</strong><br />
+            <a href="mailto:bvarsur@gmail.com"
+              ><i class="fa fa-envelope"></i>bvarsur@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn</strong><br />
+            <a
+              href="https://www.linkedin.com/in/bhavin-varsur-254214146"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>linkedin.com/bhavinvarsur</a
+            >
+          </div>
+          <div class="contact-item">
+            <strong>GitHub</strong><br />
+            <a
+              href="https://github.com/bvarsur"
+              aria-label="Visit my GitHub profile"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i> github.com/bvarsur
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <strong>Twitter</strong><br />
+            <a href="https://twitter.com/bhavin_varsur" target="_blank">
+              <i class="fab fa-twitter"></i> twitter.com/bhavinvarsur
+            </a>
+          </div>
+          <div class="contact-item">
+            <strong>YouTube</strong><br />
+            <a href="https://www.youtube.com/@bhavinvarsur1757" target="_blank">
+              <i class="fab fa-youtube"></i> youtube.com/bhavinvarsur
+            </a>
+          </div>
+          <div class="contact-item">
+            <strong>Stackoverflow</strong><br />
+            <a
+              href="https://stackoverflow.com/users/8443793/bhavin-varsur"
+              target="_blank"
+            >
+              <i class="fa fa-stack-overflow"></i>
+              Stackoverflow.com/bhavinvarsur
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- contact section end -->
+    </div>
+    <!-- back to top button -->
+    <button id="back-to-top" aria-label="Back to Top" title="Back to Top">
+      <i class="fas fa-arrow-up-long"></i>
+    </button>
+
+    <!-- footer start -->
+    <footer>
+      <p>&copy; 2025 Bhavin Varsur. All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>
