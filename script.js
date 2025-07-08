@@ -1,52 +1,56 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-const toggleBtn = document.getElementById("theme-toggle");
-const backToTopBtn = document.getElementById("back-to-top");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    /*   THEME TOGGLE  */
+    const themeToggle = document.getElementById("theme-toggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const savedTheme = localStorage.getItem("theme");
 
-// Load theme preference
-const savedTheme = localStorage.getItem("theme");
-const isDarkPreferred = savedTheme === "dark" || (!savedTheme && prefersDark);
+    const applyTheme = (theme) => {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("dark-theme", isDark);
+        themeToggle.setAttribute("aria-pressed", isDark);
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+    };
 
-if (isDarkPreferred) {
-    document.body.classList.add("dark-theme");
-    toggleBtn.textContent = "☀️";
-    toggleBtn.setAttribute("aria-label", "Switch to light theme");
-    toggleBtn.setAttribute("title", "Switch to light theme");
-    toggleBtn.setAttribute("aria-pressed", "true");
-}
+    applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
-toggleBtn.addEventListener("click", () => {
-    const isDark = document.body.classList.toggle("dark-theme");
-    toggleBtn.textContent = isDark ? "☀️" : "🌙";
-    toggleBtn.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
-    toggleBtn.setAttribute("title", isDark ? "Switch to light theme" : "Switch to dark theme");
-    toggleBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark-theme");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        themeToggle.setAttribute("aria-pressed", isDark);
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+    });
+
+    /*   BACK TO TOP BUTTON */
+    const backToTopBtn = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /*    MOBILE NAVIGATION TOGGLE  */
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+        navLinks.classList.toggle("show");
+        menuToggle.classList.toggle("change"); // Animate hamburger ↔ X
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll("a").forEach(link =>
+        link.addEventListener("click", () => {
+            if (navLinks.classList.contains("show")) {
+                navLinks.classList.remove("show");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.classList.remove("change");
+            }
+        })
+    );
 });
-
-// Back to top button visibility and scroll
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-});
-
-backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-
-//   videos section 
-function loadVideo(container, videoId) {
-    const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    iframe.frameBorder = "0";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.allowFullscreen = true;
-    iframe.width = "100%";
-    iframe.height = "315";
-    container.innerHTML = "";
-    container.appendChild(iframe);
-} 
