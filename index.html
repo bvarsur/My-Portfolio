@@ -40,7 +40,7 @@
     <!-- navigation bar start -->
     <nav>
       <div class="nav-container">
-        <button class="menu-toggle" id="menuToggle"aria-label="Toggle menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
           <div class="bar bar3"></div>
@@ -169,44 +169,143 @@
           development skills:
         </p>
         <div class="portfolio-grid">
+          <!-- To-Do List App -->
+          <div class="portfolio-item">
+            <h3>To-Do List App (.NET MAUI)</h3>
+            <p>
+              A minimal cross-platform To-Do List app built with
+              <strong>.NET MAUI</strong>.
+            </p>
+
+            <div class="more-info" style="display: none">
+              <p>
+                This lightweight task manager allows users to create, complete,
+                and delete tasks with a neat user interface. Supports persistent
+                storage using .NET MAUI Preferences and works across Android and
+                Windows. Dark/light theme included.
+              </p>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/bvarsur/maui-todo-list"
+                target="_blank"
+                class="btn github-btn"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+                  alt="GitHub"
+                  class="icon"
+                />
+                GitHub
+              </a>
+              <button class="btn read-more-btn" onclick="toggleDetails(this)">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          <!-- Simple Calculator App -->
           <div class="portfolio-item">
             <h3>Simple Calculator App</h3>
             <p>
               A cross-platform calculator app built using
               <strong>.NET MAUI</strong> that supports basic arithmetic
-              operations with a responsive and native-like interface for
-              Android, iOS, and Windows.
+              operations.
             </p>
-            <a
-              href="https://github.com/bvarsur/CalculatorApp"
-              target="_blank"
-              class="project-link"
-            >
-              View on GitHub
-            </a>
+
+            <div class="more-info" style="display: none">
+              <p>
+                Designed for both mobile and desktop, this calculator provides
+                real-time computation of inputs using MAUI’s responsive layout.
+                Clean design, functional UI, and consistent performance across
+                Android, iOS, and Windows.
+              </p>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/bvarsur/CalculatorApp"
+                target="_blank"
+                class="btn github-btn"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+                  alt="GitHub"
+                  class="icon"
+                />
+                GitHub
+              </a>
+              <button class="btn read-more-btn" onclick="toggleDetails(this)">
+                Read More
+              </button>
+            </div>
           </div>
+
+          <!-- JWT Authentication API -->
           <div class="portfolio-item">
             <h3>JWT Authentication API</h3>
             <p>
               A secure REST API implementing JWT authentication in .NET for
-              role-based access
+              role-based access.
             </p>
-            <a
-              href="https://github.com/bvarsur/JWTAuthentication"
-              target="_blank"
-              class="project-link"
-              >View on GitHub</a
-            >
+
+            <div class="more-info" style="display: none">
+              <p>
+                Implements secure user registration, login, and token-based
+                access using JSON Web Tokens. Includes role-based authorization
+                and token validation middleware in ASP.NET Core Web API.
+              </p>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/bvarsur/JWTAuthentication"
+                target="_blank"
+                class="btn github-btn"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+                  alt="GitHub"
+                  class="icon"
+                />
+                GitHub
+              </a>
+              <button class="btn read-more-btn" onclick="toggleDetails(this)">
+                Read More
+              </button>
+            </div>
           </div>
+
+          <!-- EBook Shop (.NET MVC) -->
           <div class="portfolio-item">
             <h3>EBookShop1 (.NET MVC)</h3>
             <p>
               A simple eBook shop built using ASP.NET Core MVC with category
-              filtering, book details, and admin CRUD functionality.
+              filtering and admin features.
             </p>
-            <a href="https://github.com/bvarsur/EBookShop1" target="_blank"
-              >View on GitHub</a
-            >
+
+            <div class="more-info" style="display: none">
+              <p>
+                Features product listing by category, book detail pages, and
+                secure admin area for managing content (CRUD). Built with Entity
+                Framework, Razor Views, and Bootstrap for UI styling.
+              </p>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/bvarsur/EBookShop1"
+                target="_blank"
+                class="btn github-btn"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+                  alt="GitHub"
+                  class="icon"
+                />
+                GitHub
+              </a>
+              <button class="btn read-more-btn" onclick="toggleDetails(this)">
+                Read More
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -245,7 +344,7 @@
             <a
               href="https://bhavinvarsur.blogspot.com/2020/10/logging-in-aspnet-core-31-using-nlog.html"
               target="_blank"
-              class="project-link"
+              class="btn read-more-btn"
               >Read More</a
             >
           </div>
@@ -259,9 +358,9 @@
               search queries.
             </p>
             <a
-              href="blogs//posts/sample-post3.html"
+              href="https://bhavinvarsur.blogspot.com/2019/12/indexing-searching-elasticsearch-6-3-1.html"
               target="_blank"
-              class="project-link"
+              class="btn read-more-btn"
               >Read More</a
             >
           </div>

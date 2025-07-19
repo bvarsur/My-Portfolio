@@ -54,3 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     );
 });
+
+function toggleDetails(button) {
+    const info = button.closest(".portfolio-item").querySelector(".more-info");
+    const isVisible = info.style.display === "block";
+    info.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "Read More" : "Show Less";
+}
